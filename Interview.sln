@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.URLify", "src\Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.PalindromePermutation", "src\Interview.PalindromePermutation\Interview.PalindromePermutation.csproj", "{2AF15EF6-255B-487E-9A28-71AAED480178}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.OneWay", "src\Interview.OneWay\Interview.OneWay.csproj", "{67C4FAEE-1166-4BA7-9BF1-061706A82160}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{2AF15EF6-255B-487E-9A28-71AAED480178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF15EF6-255B-487E-9A28-71AAED480178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF15EF6-255B-487E-9A28-71AAED480178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67C4FAEE-1166-4BA7-9BF1-061706A82160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67C4FAEE-1166-4BA7-9BF1-061706A82160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67C4FAEE-1166-4BA7-9BF1-061706A82160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67C4FAEE-1166-4BA7-9BF1-061706A82160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{5D113D50-4159-48CD-8918-E03D6344AD98} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{BB5CD595-D8C1-4DC9-8A9E-91EE4C8203BA} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{2AF15EF6-255B-487E-9A28-71AAED480178} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
+		{67C4FAEE-1166-4BA7-9BF1-061706A82160} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AA99FC5-7CC5-46E1-B339-F026EB17BC28}
