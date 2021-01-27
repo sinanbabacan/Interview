@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E476D6AE-F971-47DC-81EC-1C9005FCD620}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.IsUnique", "src\Interview.IsUnique\Interview.IsUnique.csproj", "{4115B610-816D-4FD2-9C02-D3C83C5B4BA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.IsUnique", "src\Interview.IsUnique\Interview.IsUnique.csproj", "{4115B610-816D-4FD2-9C02-D3C83C5B4BA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.CheckPermutation", "src\Interview.CheckPermutation\Interview.CheckPermutation.csproj", "{5D113D50-4159-48CD-8918-E03D6344AD98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{4115B610-816D-4FD2-9C02-D3C83C5B4BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4115B610-816D-4FD2-9C02-D3C83C5B4BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4115B610-816D-4FD2-9C02-D3C83C5B4BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D113D50-4159-48CD-8918-E03D6344AD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D113D50-4159-48CD-8918-E03D6344AD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D113D50-4159-48CD-8918-E03D6344AD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D113D50-4159-48CD-8918-E03D6344AD98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4115B610-816D-4FD2-9C02-D3C83C5B4BA6} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
+		{5D113D50-4159-48CD-8918-E03D6344AD98} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AA99FC5-7CC5-46E1-B339-F026EB17BC28}
