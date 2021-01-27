@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.IsUnique", "src\I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.CheckPermutation", "src\Interview.CheckPermutation\Interview.CheckPermutation.csproj", "{5D113D50-4159-48CD-8918-E03D6344AD98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.URLify", "src\Interview.URLify\Interview.URLify.csproj", "{BB5CD595-D8C1-4DC9-8A9E-91EE4C8203BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{5D113D50-4159-48CD-8918-E03D6344AD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D113D50-4159-48CD-8918-E03D6344AD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D113D50-4159-48CD-8918-E03D6344AD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5CD595-D8C1-4DC9-8A9E-91EE4C8203BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5CD595-D8C1-4DC9-8A9E-91EE4C8203BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5CD595-D8C1-4DC9-8A9E-91EE4C8203BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5CD595-D8C1-4DC9-8A9E-91EE4C8203BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4115B610-816D-4FD2-9C02-D3C83C5B4BA6} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{5D113D50-4159-48CD-8918-E03D6344AD98} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
+		{BB5CD595-D8C1-4DC9-8A9E-91EE4C8203BA} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AA99FC5-7CC5-46E1-B339-F026EB17BC28}
