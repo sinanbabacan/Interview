@@ -15,7 +15,7 @@ namespace Interview.StackMin
 
         public new void Push(int item)
         {
-            if (item < Min())
+            if (item <= Min())
             {
                 mins.Push(item);
             }
@@ -47,28 +47,10 @@ namespace Interview.StackMin
         {
             MyStack myStacks = new MyStack();
 
-            myStacks.Push(3);
-            myStacks.Push(4);
-            myStacks.Push(2);
-            myStacks.Push(5);
-
-            Console.WriteLine(myStacks.Min());
-
+            myStacks.Push(0);
             myStacks.Push(1);
-            myStacks.Push(6);
-
-            Console.WriteLine(myStacks.Min());
-
-            myStacks.Pop();
-
-            Console.WriteLine(myStacks.Min());
-
-            myStacks.Pop();
-
-            Console.WriteLine(myStacks.Min());
-
-            myStacks.Pop();
-
+            myStacks.Push(0);
+          
             Console.WriteLine(myStacks.Min());
 
             myStacks.Pop();
