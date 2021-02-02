@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.ReturnNthToLast",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Partition", "Interview.Partition\Interview.Partition.csproj", "{B880CCF2-47FF-484C-9AD3-56784DA07F3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.StackMin", "src\Interview.StackMin\Interview.StackMin.csproj", "{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{B880CCF2-47FF-484C-9AD3-56784DA07F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B880CCF2-47FF-484C-9AD3-56784DA07F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B880CCF2-47FF-484C-9AD3-56784DA07F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +106,7 @@ Global
 		{358FD08E-D896-4791-9983-39DB38162F35} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{F98DBAB0-0CFB-416F-B9A4-A90E7C49B0AA} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{B880CCF2-47FF-484C-9AD3-56784DA07F3A} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
+		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AA99FC5-7CC5-46E1-B339-F026EB17BC28}
