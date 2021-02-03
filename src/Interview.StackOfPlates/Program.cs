@@ -38,6 +38,103 @@ namespace Interview.StackOfPlates
 
     }
 
+    public class DinnerPlates
+    {
+        List<Stack<int>> stacks;
+
+        public DinnerPlates(int capacity)
+        {
+            stacks = new List<Stack<int>>();
+            Capacity = capacity;
+        }
+
+        public int Capacity { get; }
+
+        public void Push(int val)
+        {
+            Stack<int> stack = null;
+
+            for (int i = 0; i < stacks.Count; i++)
+            {
+                if (stacks[i].Count < Capacity)
+                {
+                    stack = stacks[i];
+                    break;
+                }
+            }
+
+            if (stack == null)
+            {
+                stack = new Stack<int>();
+
+                stacks.Add(stack);
+            }
+
+            stack.Push(val);
+        }
+
+        public int Pop()
+        {
+            int item = -1;
+
+            if (stacks.Count > 0)
+            {
+                Stack<int> stack = stacks[stacks.Count - 1];
+
+                if (stack.Count > 0)
+                {
+                    item = stack.Pop();
+                }
+
+                int i = stacks.Count - 1;
+
+                while (stacks[i].Count == 0)
+                {
+                    stacks.Remove(stacks[i]);
+
+                    i--;
+
+                    if (i < 0 || stacks.Count > 0 && stacks[i].Count > 0)
+                    {
+                        break;
+                    }
+                }
+            }
+
+            return item;
+        }
+
+        public int PopAtStack(int index)
+        {
+            int item = -1;
+
+            if (index < stacks.Count)
+            {
+                Stack<int> stack = stacks[index];
+
+                if (stack.Count > 0)
+                {
+                    item = stack.Pop();
+                }
+            }
+
+            int i = stacks.Count - 1;
+
+            while (stacks[i].Count == 0)
+            {
+                stacks.Remove(stacks[i]);
+
+                i--;
+
+                if (i < 0 || stacks.Count > 0 && stacks[i].Count > 0)
+                {
+                    break;
+                }
+            }
+
+            return item;
+        }
+    }
 
     public class StackPlates
     {
