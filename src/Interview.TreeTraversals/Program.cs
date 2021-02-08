@@ -3,9 +3,6 @@ using System.Collections.Generic;
 
 namespace Interview.TreeTraversals
 {
-
-
-
     public class TreeNode
     {
         public int val;
@@ -50,24 +47,86 @@ namespace Interview.TreeTraversals
 
             TreeNode node_74 = new TreeNode(74, node_53, node_81);
 
+            // IList<int> list = PreorderTraversal(node_74);
+            //  IList<int> list = InOrderTraversal(node_74);
+            //  IList<int> list = PostorderTraversal(node_74);
 
-            IList<int> lists = PreorderTraversal(node_74);
+            IList<int> list = BreadthFirstSearch(node_74);
 
         }
 
 
         public static IList<int> PreorderTraversal(TreeNode root)
         {
-            if (root == null)
+            List<int> list = new List<int>();
+
+            if (root != null)
             {
-                return new List<int>();
+                list.Add(root.val);
+
+                list.AddRange(PreorderTraversal(root.left));
+
+                list.AddRange(PreorderTraversal(root.right));
             }
 
-            List<int> list = new List<int>() { root.val };
+            return list;
+        }
 
-            list.AddRange(PreorderTraversal(root.left));
+        public static IList<int> InOrderTraversal(TreeNode root)
+        {
+            List<int> list = new List<int>();
 
-            list.AddRange(PreorderTraversal(root.right));
+            if (root != null)
+            {
+                list.AddRange(InOrderTraversal(root.left));
+
+                list.Add(root.val);
+
+                list.AddRange(InOrderTraversal(root.right));
+            }
+
+            return list;
+        }
+
+        public static IList<int> PostorderTraversal(TreeNode root)
+        {
+            List<int> list = new List<int>();
+
+            if (root != null)
+            {
+                list.AddRange(PostorderTraversal(root.left));
+                list.AddRange(PostorderTraversal(root.right));
+                list.Add(root.val);
+            }
+
+            return list;
+
+        }
+
+        public static IList<int> BreadthFirstSearch(TreeNode root)
+        {
+            List<int> list = new List<int>();
+
+            var q = new Queue<TreeNode>();
+
+            q.Enqueue(root);
+
+            while (q.Count > 0)
+            {
+                TreeNode node = q.Dequeue();
+
+                list.Add(node.val);
+
+                if (node.left != null)
+                {
+                    q.Enqueue(node.left);
+                }
+
+                if (node.right != null)
+                {
+                    q.Enqueue(node.right);
+                }
+            }
 
             return list;
         }
