@@ -27,15 +27,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.RemoveDuplicates"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.ReturnNthToLast", "src\Interview.ReturnNthToLast\Interview.ReturnNthToLast.csproj", "{F98DBAB0-0CFB-416F-B9A4-A90E7C49B0AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Partition", "Interview.Partition\Interview.Partition.csproj", "{B880CCF2-47FF-484C-9AD3-56784DA07F3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.StackMin", "src\Interview.StackMin\Interview.StackMin.csproj", "{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.StackMin", "src\Interview.StackMin\Interview.StackMin.csproj", "{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.StackOfPlates", "src\Interview.StackOfPlates\Interview.StackOfPlates.csproj", "{75D5D886-73B3-4194-8E76-DBE18AF20ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.StackOfPlates", "src\Interview.StackOfPlates\Interview.StackOfPlates.csproj", "{75D5D886-73B3-4194-8E76-DBE18AF20ED9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.QueueViaStack", "src\Interview.QueueViaStack\Interview.QueueViaStack.csproj", "{AF641798-037F-4913-9AA6-C9E2B8195992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.QueueViaStack", "src\Interview.QueueViaStack\Interview.QueueViaStack.csproj", "{AF641798-037F-4913-9AA6-C9E2B8195992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.SortStack", "src\Interview.SortStack\Interview.SortStack.csproj", "{C566B0D5-2F4E-4794-9203-C96D02BDB70A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.SortStack", "src\Interview.SortStack\Interview.SortStack.csproj", "{C566B0D5-2F4E-4794-9203-C96D02BDB70A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.TreeTraversals", "src\Interview.TreeTraversals\Interview.TreeTraversals.csproj", "{7404D258-FE40-45E0-9463-BFE2FBB9A080}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.Partition", "src\Interview.Partition\Interview.Partition.csproj", "{A8134B93-9586-4AFA-ABA9-D3B0A872BCBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,10 +89,6 @@ Global
 		{F98DBAB0-0CFB-416F-B9A4-A90E7C49B0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F98DBAB0-0CFB-416F-B9A4-A90E7C49B0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F98DBAB0-0CFB-416F-B9A4-A90E7C49B0AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B880CCF2-47FF-484C-9AD3-56784DA07F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B880CCF2-47FF-484C-9AD3-56784DA07F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B880CCF2-47FF-484C-9AD3-56784DA07F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B880CCF2-47FF-484C-9AD3-56784DA07F3A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -107,6 +105,14 @@ Global
 		{C566B0D5-2F4E-4794-9203-C96D02BDB70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C566B0D5-2F4E-4794-9203-C96D02BDB70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C566B0D5-2F4E-4794-9203-C96D02BDB70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7404D258-FE40-45E0-9463-BFE2FBB9A080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7404D258-FE40-45E0-9463-BFE2FBB9A080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7404D258-FE40-45E0-9463-BFE2FBB9A080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7404D258-FE40-45E0-9463-BFE2FBB9A080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8134B93-9586-4AFA-ABA9-D3B0A872BCBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8134B93-9586-4AFA-ABA9-D3B0A872BCBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8134B93-9586-4AFA-ABA9-D3B0A872BCBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8134B93-9586-4AFA-ABA9-D3B0A872BCBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,11 +129,12 @@ Global
 		{CAA93576-1B24-4AC5-8CE4-8885E722D31D} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{358FD08E-D896-4791-9983-39DB38162F35} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{F98DBAB0-0CFB-416F-B9A4-A90E7C49B0AA} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
-		{B880CCF2-47FF-484C-9AD3-56784DA07F3A} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{FA2801AA-2110-40DA-AF1D-D5FAEB69D999} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{75D5D886-73B3-4194-8E76-DBE18AF20ED9} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{AF641798-037F-4913-9AA6-C9E2B8195992} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 		{C566B0D5-2F4E-4794-9203-C96D02BDB70A} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
+		{7404D258-FE40-45E0-9463-BFE2FBB9A080} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
+		{A8134B93-9586-4AFA-ABA9-D3B0A872BCBE} = {E476D6AE-F971-47DC-81EC-1C9005FCD620}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AA99FC5-7CC5-46E1-B339-F026EB17BC28}
