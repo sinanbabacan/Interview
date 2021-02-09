@@ -6,48 +6,39 @@ namespace Interview.PalindromePermutation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Check("Tact Coa "));
+            // Console.WriteLine(CanPermutePalindrome("Tact Coa "));
+            Console.WriteLine(CanPermutePalindrome("AaBb//a"));
 
             // For example, “code” -> False, “aab” -> True, “carerac” -> True.
 
-            Console.WriteLine(Check("code"));
-            Console.WriteLine(Check("codec"));
-            Console.WriteLine(Check("aab "));
-            Console.WriteLine(Check("carerac"));
-            Console.WriteLine(Check("arcerca"));
+            Console.WriteLine(CanPermutePalindrome("code"));
+            Console.WriteLine(CanPermutePalindrome("codec"));
+            Console.WriteLine(CanPermutePalindrome("aab "));
+            Console.WriteLine(CanPermutePalindrome("carerac"));
+            Console.WriteLine(CanPermutePalindrome("arcerca"));
         }
 
 
-        private static bool Check(string input)
+        private static bool CanPermutePalindrome(string s)
         {
-            int[] asciiChars = new int[128];
+            int[] chars = new int[Char.MaxValue];
 
             int characterCount = 0;
 
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                char c = Char.ToLower(input[i]);
-
-                if (Char.IsLetter(c))
-                {
-                    asciiChars[c]++;
-                    characterCount++;
-                }
+                chars[s[i]]++;
+                characterCount++;
             }
 
             int sum = 0;
 
-            for (int i = 0; i < asciiChars.Length; i++)
+            for (int i = 0; i < chars.Length; i++)
             {
-                sum += asciiChars[i] % 2;
-
-                if (sum > 1)
-                {
-                    return false;
-                }
+                sum += chars[i] % 2;
             }
 
-            return characterCount % 2 == sum % 2;
+            return sum <= 1;
         }
     }
 }
