@@ -8,18 +8,50 @@ namespace Interview.StackOfPlates
     {
         static void Main(string[] args)
         {
-            StackPlates stackPlates = new StackPlates(3);
+
+            /* 
+["DinnerPlates","push","push","push","push","push","push","push","push",
+            "popAtStack","popAtStack","popAtStack","popAtStack","popAtStack","popAtStack","popAtStack","popAtStack","popAtStack","popAtStack",
+            "push","push","push","push","push","push","push","push",
+            "pop","pop","pop","pop","pop","pop","pop","pop","pop","pop"]
+[[472],[106],[497],[498],[73],[115],[437],[461],
+            [3],[3],[1],[3],[0],[2],[2],[1],[1],[3],
+            [197],[239],[129],[449],[460],[240],[386],[343]
+            ,[],[],[],[],[],[],[],[],[],[]]
+             */
+
+            DinnerPlates stackPlates = new DinnerPlates(2);
 
             stackPlates.Push(1);
             stackPlates.Push(2);
             stackPlates.Push(3);
-            stackPlates.Push(4);
-            stackPlates.Push(5);
-            stackPlates.Push(6);
             stackPlates.Push(7);
-            stackPlates.Push(8);
-            stackPlates.Push(9);
-            stackPlates.Push(10);
+            stackPlates.Push(4);
+            stackPlates.Push(7);
+            stackPlates.Push(7);
+            stackPlates.Push(7);
+
+            stackPlates.PopAtStack(3);
+            stackPlates.PopAtStack(3);
+            stackPlates.PopAtStack(1);
+            stackPlates.PopAtStack(3);
+            stackPlates.PopAtStack(0);
+            stackPlates.PopAtStack(2);
+            stackPlates.PopAtStack(2);
+            stackPlates.PopAtStack(1);
+            stackPlates.PopAtStack(1);
+            stackPlates.PopAtStack(3);
+
+            stackPlates.Push(1);
+            stackPlates.Push(2);
+            stackPlates.Push(3);
+            stackPlates.Push(7);
+            stackPlates.Push(4);
+            stackPlates.Push(7);
+            stackPlates.Push(7);
+            stackPlates.Push(7);
+
+
 
             stackPlates.Pop();
             stackPlates.Pop();
@@ -28,10 +60,11 @@ namespace Interview.StackOfPlates
             stackPlates.Pop();
             stackPlates.Pop();
             stackPlates.Pop();
+            stackPlates.Pop();
+            stackPlates.Pop();
+            stackPlates.Pop();
 
-            stackPlates.Push(11);
-            stackPlates.Push(12);
-            stackPlates.Push(13);
+           
 
         }
 
@@ -40,99 +73,143 @@ namespace Interview.StackOfPlates
 
     public class DinnerPlates
     {
-        List<Stack<int>> stacks;
+        private Stack<int> _mins;
+        private Stack<int> _minTemps;
+        private List<Stack<int>> _stacks;
+        private Dictionary<int, Stack<int>> _freeStacks;
+        private int _capacity { get; }
 
         public DinnerPlates(int capacity)
         {
-            stacks = new List<Stack<int>>();
-            Capacity = capacity;
-        }
+            _mins = new Stack<int>();
 
-        public int Capacity { get; }
+            _minTemps = new Stack<int>();
+
+            _stacks = new List<Stack<int>>();
+
+            _freeStacks = new Dictionary<int, Stack<int>>();
+
+            _capacity = capacity;
+        }
 
         public void Push(int val)
         {
             Stack<int> stack = null;
 
-            for (int i = 0; i < stacks.Count; i++)
-            {
-                if (stacks[i].Count < Capacity)
-                {
-                    stack = stacks[i];
-                    break;
-                }
-            }
+            int min = GetMin();
 
-            if (stack == null)
+            if (min < 0)
             {
                 stack = new Stack<int>();
 
-                stacks.Add(stack);
+                min = _stacks.Count;
+
+                _freeStacks[min] = stack;
+
+                AddValue(min);
+
+                _stacks.Add(stack);
             }
 
+            stack = _freeStacks[min];
+
             stack.Push(val);
+
+            if (stack.Count == _capacity)
+            {
+                _freeStacks.Remove(min);
+
+                RemoveValue(min);
+            }
         }
 
         public int Pop()
         {
-            int item = -1;
-
-            if (stacks.Count > 0)
-            {
-                Stack<int> stack = stacks[stacks.Count - 1];
-
-                if (stack.Count > 0)
-                {
-                    item = stack.Pop();
-                }
-
-                int i = stacks.Count - 1;
-
-                while (stacks[i].Count == 0)
-                {
-                    stacks.Remove(stacks[i]);
-
-                    i--;
-
-                    if (i < 0 || stacks.Count > 0 && stacks[i].Count > 0)
-                    {
-                        break;
-                    }
-                }
-            }
-
-            return item;
+            return PopAtStack(_stacks.Count - 1);
         }
 
         public int PopAtStack(int index)
         {
-            int item = -1;
-
-            if (index < stacks.Count)
+            if (index < 0 || index > _stacks.Count - 1)
             {
-                Stack<int> stack = stacks[index];
+                return -1;
+            }
 
-                if (stack.Count > 0)
+            Stack<int> stack = _stacks[index];
+
+            if (stack == null || stack.Count == 0)
+            {
+                return -1;
+            }
+
+            if (stack.Count == _capacity)
+            {
+                _freeStacks[index] = stack;
+
+                AddValue(index);
+            }
+
+            int v = stack.Pop();
+
+            if (_stacks.Count - 1 == index)
+            {
+                while (index >= 0 && _stacks[index] != null && _stacks[index].Count == 0)
                 {
-                    item = stack.Pop();
+                    _freeStacks.Remove(index);
+                    _stacks.RemoveAt(index);
+                    RemoveValue(index);
+                    index--;
                 }
             }
 
-            int i = stacks.Count - 1;
+            return v;
+        }
 
-            while (stacks[i].Count == 0)
+        private void AddValue(int val)
+        {
+            while (_mins.Count > 0 && val > _mins.Peek())
             {
-                stacks.Remove(stacks[i]);
+                _minTemps.Push(_mins.Pop());
+            }
 
-                i--;
+            _mins.Push(val);
 
-                if (i < 0 || stacks.Count > 0 && stacks[i].Count > 0)
+            while (_minTemps.Count > 0)
+            {
+                _mins.Push(_minTemps.Pop());
+            }
+        }
+
+        private void RemoveValue(int val)
+        {
+            while (_mins.Count > 0)
+            {
+                int v = _mins.Pop();
+
+                if (v == val)
                 {
                     break;
                 }
+
+                _minTemps.Push(v);
             }
 
-            return item;
+            while (_minTemps.Count > 0)
+            {
+                _mins.Push(_minTemps.Pop());
+            }
+        }
+
+        private int GetMin()
+        {
+            int v = -1;
+
+            if (_mins.Count > 0)
+            {
+                v = _mins.Peek();
+            }
+
+            return v;
         }
     }
 
